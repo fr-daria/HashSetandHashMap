@@ -23,10 +23,12 @@ public class Main {
                 }
                 for (char k : map.keySet()) {
                     int i = map.get(k);
-                    if (i > Integer.MAX_VALUE) {
-                        System.out.println("Максимальное число " + i);
+                    if (i > 0 && i < Integer.MAX_VALUE) {
+                        System.out.println("Минимальное число " + i + " символа " + k);
+                    } else if (i > Integer.MAX_VALUE){
+                        System.out.println("Максимальное число " + i + " символа " + k);
                     }
-                    // если число наименьшее то вывеси его
+
                 }
             }
         }
